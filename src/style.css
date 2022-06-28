@@ -1,0 +1,24 @@
+*{
+  box-sizing: border-box;
+}
+
+#root, body, html {
+  margin:0;
+  font-family: 'Karla', 'Inter', sans-serif;
+  height:100%;
+  width: 100%;;
+}
+
+.container{
+  height:100%;
+  width: 100%;
+}
+
+.centered{
+  flex-direction: column;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
