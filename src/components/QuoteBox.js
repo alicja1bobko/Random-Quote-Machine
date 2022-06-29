@@ -1,19 +1,35 @@
-import React, { Component } from "react";
+import React, { Component, useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitterSquare, faTumblrSquare } from "@fortawesome/free-brands-svg-icons";
 import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
 
-export default class QuoteBox extends Component {
+export default function QuoteBox({quotes}){
 
-  render() {
-    return (
+    const [randomQuote, setRandomQuote] = useState({});
+
+    useEffect(() => {
+        getRandomQuote();
+    }, []);
+
+
+    function getRandomQuote() {
+
+        let randomQuote = quotes[Math.floor(Math.random()*quotes.length)]
+        setRandomQuote({
+            currentQuote: randomQuote.quote,
+            currentAuthor: randomQuote.author
+        })
+    
+    }
+
+    return(
         <div id="quote-box" >
-          
-            <div className="quote-text">
-                <span id="text"><FontAwesomeIcon icon={faQuoteLeft} />I didn't fail the test. I just found 100 ways to do it wrong</span>
+                <div className="quote-text">
+                    <span id="text"><FontAwesomeIcon icon={faQuoteLeft} />{randomQuote.currentQuote}</span>
+                   
             </div>
             <div className="quote-author">-
-                <span id="author">Benjamin Franklin</span></div>
+                    <span id="author">{randomQuote.currentAuthor}</span></div>
             <div className="buttons">
                 <a className="btn" id="tweet-quote" title="Tweet this quote!" href="">
                     <FontAwesomeIcon icon={faTwitterSquare} />
@@ -21,10 +37,13 @@ export default class QuoteBox extends Component {
                 <a className="btn" id="tumblr-quote" title="Post this quote on tumblr!" href="">
                     <FontAwesomeIcon icon={faTumblrSquare} />
                 </a>
-                <button className="btn" id="new-quote">New quote</button>
+                <button className="btn" id="new-quote" onClick={() => getRandomQuote()}>New quote</button>
                 </div>
-         
-      </div>
-    )
-  }
-}
+          
+            </div>
+            
+        )
+    }
+    
+  
+
