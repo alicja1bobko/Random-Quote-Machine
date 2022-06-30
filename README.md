@@ -2,11 +2,7 @@
 
 This is the 1st Project for FreeCodeCamp's Front End Development Libraries Projects.
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### Tech & API
+## Tech & API
 
 🚀 React <br>
 🚀 Bootstrap <br>
