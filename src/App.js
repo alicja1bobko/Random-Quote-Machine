@@ -1,11 +1,9 @@
-import './App.css';
 import QuoteBox from './components/QuoteBox';
 import React, { useState, useEffect } from 'react';
 import LoadingSpinner from './components/LoadingSpinner';
 import ErrorMessage from './components/ErrorMessage';
 
 function App() {
-
   const [quotes, setQuotes] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -26,13 +24,14 @@ function App() {
           setQuotes([]);
           })
         }
-      
 
   return (
-    <div className="container centered">
-      {isLoading ? <LoadingSpinner />
-      : quotes.length !== 0 ? <QuoteBox quotes={quotes} /> : <ErrorMessage/>}
-     
+    <div className="container centered container-fluid">
+      {isLoading ?
+        <LoadingSpinner />
+        : quotes.length !== 0 ?
+          <QuoteBox quotes={quotes} />
+        : <ErrorMessage />}
     </div>
   );
 }
