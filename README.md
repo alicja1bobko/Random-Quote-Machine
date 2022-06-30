@@ -8,8 +8,8 @@ In the project directory, you can run:
 
 ### Tech & API
 
-🚀 React 
-🚀 Bootstrap 
-🚀 jQuery
-🚀 Font Awesome React Icons 
-🚀 Random Quotes API (freeCodeCamp camperbot)
+🚀 React <br>
+🚀 Bootstrap <br>
+🚀 jQuery <br>
+🚀 Font Awesome React Icons <br>
+🚀 Random Quotes API (freeCodeCamp camperbot) <br>
