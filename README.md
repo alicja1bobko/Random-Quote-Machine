@@ -9,3 +9,6 @@ This is the 1st Project for FreeCodeCamp's Front End Development Libraries Proje
 🚀 jQuery <br>
 🚀 Font Awesome React Icons <br>
 🚀 Random Quotes API (freeCodeCamp camperbot) <br>
+
+
+Site hosted on gh-pages: https://alicja1bobko.github.io/Random-Quote-Machine/

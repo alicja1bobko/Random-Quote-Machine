@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { Component, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faTumblr } from "@fortawesome/free-brands-svg-icons";
 import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
